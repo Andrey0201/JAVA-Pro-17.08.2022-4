@@ -1,4 +1,4 @@
-package com.javapro.lesson4.model.service;
+package com.javapro.lesson4.service;
 
 import com.javapro.lesson4.model.Animal;
 import com.javapro.lesson4.model.Cat;
