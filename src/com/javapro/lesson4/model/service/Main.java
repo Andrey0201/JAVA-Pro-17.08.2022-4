@@ -5,35 +5,21 @@ import com.javapro.lesson4.model.Cat;
 import com.javapro.lesson4.model.Dog;
 
 public class Main {
-    private static Animal[] array = new Animal[3];
-    private static Animal[] array2 = null;
 
     public static void main(String[] args) {
-        array2 = new Animal[]{
-                new Cat("Shali"),
-        };
+        Animal cat1 = new Cat("Bonya");
+        Animal cat2 = new Cat("Shelli");
+        Animal dog1 = new Dog("Rem");
 
-        array[0] = new Cat("Murka");
-        Animal cat = new Cat("Bonya");
-//        array[1] = cat;
-        cat.run(201);
-        cat.swim(15);
-        Animal dog = new Dog("Rem");
-        array[2] = dog;
-        dog.swim(9);
+        cat1.run(200);
+        cat1.run(250);
+        cat1.swim(10);
 
-        System.out.println("Total animals: " + getTotalCount(array));
-//        System.out.println("Total animals: " + getTotalCount()) ;
-//        System.out.println("Total animals: " + getTotalCount()) ;
-    }
+        dog1.run(488);
+        dog1.run(501);
+        dog1.swim(10);
+        dog1.swim(11);
 
-    private static int getTotalCount(Animal[] arr) {
-        int count = 0;
-        for (Animal a : arr) {
-            if (a instanceof Cat) {
-                count++;
-            }
-        }
-        return count;
+        cat2.swim(12);
     }
 }

@@ -1,14 +1,11 @@
 package com.javapro.lesson4.model;
 
-import com.javapro.lesson4.model.Animal;
-
 public class Dog extends Animal {
     private int distanceLimitRun = 500;
     private int distanceLimitSwim = 10;
 
     public Dog(String name) {
         super(name);
-
     }
 
     @Override
@@ -18,12 +15,12 @@ public class Dog extends Animal {
 
     @Override
     void printNegativeResult(String action) {
-        System.out.println("Dog " + name + " can't " + action);
+        System.out.println("Dog " + name + " can't " + action + " that much");
     }
 
     @Override
     void printExceptionResult(String action) {
-        System.out.println("Dog " + name + " can't " + action + " that much");
+        System.out.println("Dog " + name + " can't " + action);
     }
 
     @Override
