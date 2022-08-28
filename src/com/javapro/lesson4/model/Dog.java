@@ -1,5 +1,7 @@
 package com.javapro.lesson4.model;
 
+import java.util.Objects;
+
 public class Dog extends Animal {
     private int distanceLimitRun = 500;
     private int distanceLimitSwim = 10;
@@ -31,5 +33,20 @@ public class Dog extends Animal {
     @Override
     int getLimitSwimDistance() {
         return distanceLimitSwim;
+    }
+
+    @Override
+    public AnimalType getAnimalType() {
+        return AnimalType.DOG;
+    }
+
+    @Override
+    public ActionType getActionType(String action) {
+        if (Objects.equals(action, "RUN"))
+            return ActionType.RUN;
+        else if (Objects.equals(action, "SWIM"))
+            return ActionType.SWIM;
+        else
+            return null;
     }
 }

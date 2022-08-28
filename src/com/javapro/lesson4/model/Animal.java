@@ -12,6 +12,10 @@ abstract public class Animal {
         this.name = name;
     }
 
+    public String getName() {
+        return name;
+    }
+
     public void run(int distance) {
         if (distance <= getLimitRunDistance()) {
             printPositiveResult("ran", String.valueOf(distance));
@@ -40,6 +44,9 @@ abstract public class Animal {
 
     abstract int getLimitSwimDistance();
 
+    public abstract AnimalType getAnimalType();
+
+    public abstract ActionType getActionType(String action);
 }
 
 
