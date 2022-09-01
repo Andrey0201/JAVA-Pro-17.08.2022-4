@@ -1,7 +1,5 @@
 package com.javapro.lesson4.model;
 
-import java.util.Objects;
-
 public class Cat extends Animal {
 
     private int distanceLimitRun = 200;
@@ -44,12 +42,10 @@ public class Cat extends Animal {
 
     @Override
     public ActionType getActionType(String action) {
-        if (Objects.equals(action, "RUN"))
-            return ActionType.RUN;
-        else if (Objects.equals(action, "SWIM"))
-            return ActionType.SWIM;
-        else
-            return null;
+        return ActionType.valueOf(action);
     }
 }
+
+
+
 

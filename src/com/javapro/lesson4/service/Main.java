@@ -12,9 +12,10 @@ public class Main {
 
     public static void main(String[] args) {
         createNewAnimals();
-        actionAnimal("RUN");
-        actionAnimal("SWIM");
-        personalAnimalAction("Bonya", "RUN", 10);
+        actionAnimal("RUN",51);
+        actionAnimal("SWIM",9);
+        personalAnimalAction("Bonya", "RUN", 9);
+        personalAnimalAction("Rem","SWIM",8);
         System.out.println("Total animals: " + getTotalCount());
         System.out.println("Total Cat: " + getAnimalListCount().get(0));
         System.out.println("Total Dog: " + getAnimalListCount().get(1));
@@ -27,19 +28,20 @@ public class Main {
         array = new Animal[]{
                 new Cat("Shali"),
                 new Dog("Rem"),
-                new Cat("Bonya")
+                new Cat("Bonya"),
+
         };
     }
 
     /**
      * Задаем дистанции одновременно всем созданым Animal
      */
-    private static void actionAnimal(String action) {
+    private static void actionAnimal(String action,int distance) {
 
         for (Animal animal : array) {
             switch (animal.getActionType(action)) {
-                case RUN -> animal.run(501);
-                case SWIM -> animal.swim(11);
+                case RUN -> animal.run(distance);
+                case SWIM -> animal.swim(distance);
             }
         }
     }
@@ -56,6 +58,7 @@ public class Main {
                 }
                 return;
             }
+
         }
     }
 
