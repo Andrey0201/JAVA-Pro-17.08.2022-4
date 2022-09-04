@@ -1,9 +1,9 @@
-package com.javapro.lesson4.service;
+package com.javapro.lesson4;
 
-import com.javapro.lesson4.model.ActionType;
 import com.javapro.lesson4.model.Animal;
 import com.javapro.lesson4.model.Cat;
 import com.javapro.lesson4.model.Dog;
+import com.javapro.lesson4.service.ActionType;
 
 import java.util.ArrayList;
 

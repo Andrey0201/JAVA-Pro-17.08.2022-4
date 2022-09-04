@@ -1,5 +1,7 @@
 package com.javapro.lesson4.model;
 
+import com.javapro.lesson4.service.AnimalType;
+
 public class Cat extends Animal {
 
     private int distanceLimitRun = 200;

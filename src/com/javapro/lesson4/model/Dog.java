@@ -1,6 +1,6 @@
 package com.javapro.lesson4.model;
 
-import java.util.Objects;
+import com.javapro.lesson4.service.AnimalType;
 
 public class Dog extends Animal {
     private int distanceLimitRun = 500;

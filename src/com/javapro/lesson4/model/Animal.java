@@ -1,5 +1,7 @@
 package com.javapro.lesson4.model;
 
+import com.javapro.lesson4.service.AnimalType;
+
 /**
  * в данной реализауии класса Animal создание обьекта Animal не предусмотрено
  */
