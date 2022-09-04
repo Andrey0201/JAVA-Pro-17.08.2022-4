@@ -46,7 +46,6 @@ abstract public class Animal {
 
     public abstract AnimalType getAnimalType();
 
-    public abstract ActionType getActionType(String action);
 }
 
 
