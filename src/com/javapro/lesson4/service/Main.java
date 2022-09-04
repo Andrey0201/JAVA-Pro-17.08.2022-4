@@ -21,7 +21,7 @@ public class Main {
 
         createNewAnimals();
         actionAnimal(ActionType.RUN,51);
-        actionAnimal(ActionType.RUN,9);
+        actionAnimal(ActionType.SWIM,9);
         personalAnimalAction("Bonya",ActionType.RUN, 9);
         personalAnimalAction("Rem",ActionType.SWIM,8);
         System.out.println("Total animals: " + getTotalCount());
