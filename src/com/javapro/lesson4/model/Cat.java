@@ -39,11 +39,6 @@ public class Cat extends Animal {
         return AnimalType.CAT;
     }
 
-
-    @Override
-    public ActionType getActionType(String action) {
-        return ActionType.valueOf(action);
-    }
 }
 
 

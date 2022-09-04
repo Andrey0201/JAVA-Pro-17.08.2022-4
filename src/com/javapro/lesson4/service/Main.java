@@ -1,5 +1,6 @@
 package com.javapro.lesson4.service;
 
+import com.javapro.lesson4.model.ActionType;
 import com.javapro.lesson4.model.Animal;
 import com.javapro.lesson4.model.Cat;
 import com.javapro.lesson4.model.Dog;
@@ -12,10 +13,10 @@ public class Main {
 
     public static void main(String[] args) {
         createNewAnimals();
-        actionAnimal("RUN",51);
-        actionAnimal("SWIM",9);
-        personalAnimalAction("Bonya", "RUN", 9);
-        personalAnimalAction("Rem","SWIM",8);
+        actionAnimal(ActionType.RUN,51);
+        actionAnimal(ActionType.SWIM,9);
+        personalAnimalAction("Bonya", ActionType.RUN, 9);
+        personalAnimalAction("Rem",ActionType.SWIM,8);
         System.out.println("Total animals: " + getTotalCount());
         System.out.println("Total Cat: " + getAnimalListCount().get(0));
         System.out.println("Total Dog: " + getAnimalListCount().get(1));
@@ -36,10 +37,9 @@ public class Main {
     /**
      * Задаем дистанции одновременно всем созданым Animal
      */
-    private static void actionAnimal(String action,int distance) {
-
+    private static void actionAnimal(ActionType actionType, int distance) {
         for (Animal animal : array) {
-            switch (animal.getActionType(action)) {
+            switch (actionType) {
                 case RUN -> animal.run(distance);
                 case SWIM -> animal.swim(distance);
             }
@@ -49,10 +49,10 @@ public class Main {
     /**
      * Задаем дистанцию и вид действия персонально для созданого Animal обращаясть по его имени
      */
-    private static void personalAnimalAction(String name, String action, int distance) {
+    private static void personalAnimalAction(String name, ActionType actionType, int distance) {
         for (Animal animal : array) {
             if (animal.getName().equals(name)) {
-                switch (animal.getActionType(action)) {
+                switch (actionType) {
                     case RUN -> animal.run(distance);
                     case SWIM -> animal.swim(distance);
                 }
